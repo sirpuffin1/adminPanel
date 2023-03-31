@@ -10,7 +10,7 @@ const index = () => {
 
   const [page, setPage] = useState(0);
   const [pageSize, setPageSize] = useState(25);
-  const [sort, setSort] = useState("");
+  const [sort, setSort] = useState({});
   const [search, setSearch] = useState("");
   const [paginationModel, setPaginationModel] = useState({
     page: 0,
