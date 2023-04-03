@@ -12,6 +12,7 @@ const index = () => {
   const [pageSize, setPageSize] = useState(25);
   const [sort, setSort] = useState({});
   const [search, setSearch] = useState("");
+  const [ searchInput, setSearchInput ] = useState("")
   const [paginationModel, setPaginationModel] = useState({
     page: 0,
     pageSize: 25
@@ -102,9 +103,10 @@ const index = () => {
             setPaginationModel(paginationModel)
           }}
           onSortModelChange={(newSortModel) => setSort(...newSortModel)}
-          
-        //   onSortModelChange={(newSortModel) => setSort(...newSortModel)}
-        //   components={{ Toolbar: DataGridCustomToolbar }}
+          components={{ Toolbar: DataGridCustomToolbar }}
+          componentsProps={{
+            toolbar: { searchInput, setSearchInput, setSearch },
+          }}
         />
       </Box>
     </Box>
