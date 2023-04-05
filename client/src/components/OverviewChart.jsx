@@ -11,7 +11,6 @@ const OverviewChart = ({ isDashboard = false, view }) => {
     if (!data) return [[], []];
 
     const { monthlyData } = data;
-    console.log(monthlyData, "YO")
     const totalSalesLine = {
       id: "totalSales",
       color: theme.palette.secondary.main,
